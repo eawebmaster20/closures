@@ -1,0 +1,16 @@
+:root{
+    height: 100%;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    margin: 0;
+}
+#eventBtn{
+padding: 10px;
+border: 0px;
+border-radius: 5px;
+background-color: blue;
+color: white;
+}
