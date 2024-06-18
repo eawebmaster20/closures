@@ -11,3 +11,4 @@ let person = new Person("Benjamin", 5)
 person.greet();
 person.greet.call({name:'mensah',age:21});
 person.greet.apply({name:'Gideon',age:2});
+(person.greet.bind({name:'Matthew',age:46}))();
