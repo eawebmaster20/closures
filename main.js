@@ -12,3 +12,34 @@ person.greet();
 person.greet.call({name:'mensah',age:21});
 person.greet.apply({name:'Gideon',age:2});
 (person.greet.bind({name:'Matthew',age:46}))();
+
+
+/*************************************************************************
+ * EVENT HANDLING AND 'this' KEYWORD
+ *************************************************************************/
+const arrowHandleClick = ()=>{
+    console.log(this);
+    // console.log(this);
+}
+function handleClick() {
+    console.log(this);
+    arrowHandleClick()
+}
+
+function tellMe() {
+    console.log('this');
+}
+
+function createCounter(){
+    let count = 0;
+    return {
+        increament:function() {
+            count++;
+        },
+        getCount: function () {
+            count
+        }
+    }
+}
+document.addEventListener('resize', tellMe)
+document.getElementById('eventBtn').addEventListener('click', handleClick)
