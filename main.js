@@ -66,6 +66,9 @@ const createTimer= (duration, elementId)=>{
             if (countDownCounter >=0) {
                 document.getElementById(`${elementId}`).textContent = countDownCounter;
             }
+            if (countDownCounter < 0) {
+                location.reload()
+            }
             countDownCounter = countDownCounter -1
         }, 1000);
     }
