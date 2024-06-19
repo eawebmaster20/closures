@@ -8,9 +8,30 @@ body{
     margin: 0;
 }
 #eventBtn{
-padding: 10px;
-border: 0px;
-border-radius: 5px;
-background-color: blue;
-color: white;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(71, 71, 240);
+    color: white;
+}
+
+.counter-container{
+    display: flex;
+}
+
+#counterElement{
+    padding: 1rem 8rem;
+    background-color: rgb(71, 71, 240);
+    color: white;
+    font-size: 3em;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+.counter-container button{
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(114, 114, 121);
+    color: white;
 }
