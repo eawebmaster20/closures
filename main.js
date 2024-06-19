@@ -46,7 +46,7 @@ const createCounter= ()=>{
         }
         const getCount= ()=> {
             count;
-            console.log('count is '+count);
+            console.log('count is '+count);// here, this refers to the methods inside the createCounter function. hence you can't use 'this.count'
         }
     return {increament, getCount}
 }
@@ -61,7 +61,7 @@ result.getCount();
  * REUSABLE COMPONENTS WITH CLOSURE
  *************************************************************************/
 const createTimer= (duration, elementId)=>{
-    let countDownCounter=duration
+    let countDownCounter=duration // here, this refers to the window object. hence you can't use 'this.countDownCounter'
         setInterval(() => {
             if (countDownCounter >=0) {
                 document.getElementById(`${elementId}`).textContent = countDownCounter;
