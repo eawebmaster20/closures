@@ -1,3 +1,6 @@
+/*************************************************************************
+ * OBJECT METHOD AND this:
+ *************************************************************************/
 function Person (name, age){
     this.name =name;
     this.age = age;
@@ -32,18 +35,10 @@ function checkValidity() {
     }
 }
 
-const createTimer= (duration, elementId)=>{
-    let countDownCounter=duration
-        setInterval(() => {
-            if (countDownCounter >=0) {
-                document.getElementById(`${elementId}`).textContent = countDownCounter;
-            }
-            countDownCounter = countDownCounter -1
-        }, 1000);
-    }
 
-
-
+/*************************************************************************
+ * PRIVATE DATA WITH CLOSURE 'this' KEYWORD
+ *************************************************************************/
 const createCounter= ()=>{
     let count = 0;
         const increament=()=> {
@@ -55,12 +50,25 @@ const createCounter= ()=>{
         }
     return {increament, getCount}
 }
+
 const result = createCounter();
 result;
 result.increament();
 result.increament();
 result.increament();
 result.getCount();
+/*************************************************************************
+ * REUSABLE COMPONENTS WITH CLOSURE
+ *************************************************************************/
+const createTimer= (duration, elementId)=>{
+    let countDownCounter=duration
+        setInterval(() => {
+            if (countDownCounter >=0) {
+                document.getElementById(`${elementId}`).textContent = countDownCounter;
+            }
+            countDownCounter = countDownCounter -1
+        }, 1000);
+    }
 
 document.getElementById('eventBtn').addEventListener('click', handleClick)
 document.getElementById('addTimerBtn').addEventListener('click', checkValidity)
